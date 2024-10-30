@@ -11,5 +11,5 @@ wall "
 	#Connections TCP : $(ss -t | grep ESTAB | wc -l) ESTABLISHED
 	#User log : $(who | wc -l)
 	#Network : IP $(ip -4 addr show dev enp0s3 | grep inet | awk '{print $2}' | cut -d'/' -f1) ($(ip link show dev enp0s3 | grep link/ether | awk '{print $2}'))
-	#Sudo : $(grep -c 'COMMAND' /var/log/sudo/sudolog) cmd
+	#Sudo : $(grep -c 'COMMAND' /var/log/sudo/sudo.log) cmd
 "
